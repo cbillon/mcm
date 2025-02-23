@@ -1,7 +1,7 @@
-# Moodle Codebase Manager 
+# Codebase Manager 
 
-Moodle CdeBaseManager est un outil en ligne de commande pour installer les plugins Moodle via Git (sans utiliser les commades git submodules).
-Il s'agit de gérer une base de code construite à partir d'une version de Moodle et d'y intégrer une liste de plugins.
+CodeBase Manager est un outil en ligne de commande pour installer les plugins Moodle via Git (sans utiliser les commades git submodules).
+Il s'agit de construire une base de code à partir d'une version de Moodle et d'y intégrer une liste de plugins.
 L'outil est un script bash qui fonctionne dans un environnement Linux.
 
 Vous décrivez la configuration souhaitée dans un fichier au format yaml:
@@ -23,11 +23,10 @@ Vous décrivez la configuration souhaitée dans un fichier au format yaml:
 ```    
 Ce fichier définit l'état de la base de code .
 
-![Boucle de controle](./docs/pictures/Boucle_de_controle.png) 
-Crédit Ian Miell
+![Boucle de controle](./docs/pictures/Reconcialiation.png) 
 
-Le script construira pour chaque projet une base de code conforme à l'état demandé.
-En cas de modifications (mise à jour de Moodle, ajout d'un nouveau plugin, mise à jour d'un plugin,.. ) le script mettra à jour la base de code à jour pour obtenir le nouvel état demandé. 
+Le script construit pour chaque projet une base de code conforme à l'état demandé.
+En cas de modifications (mise à jour de Moodle, ajout d'un nouveau plugin, mise à jour d'un plugin,.. ) le script met à jour la base de code à jour pour obtenir le nouvel état demandé. 
 
 L'utilisation de git permet de gérer un historique de la base de code :
 - son état initial
